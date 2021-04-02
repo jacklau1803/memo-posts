@@ -25,3 +25,4 @@ To start the server:
     cd client
     ng serve
 
+After starting the app, you may find it on http://127.0.0.1:4200/.
