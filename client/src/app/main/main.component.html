@@ -1,0 +1,9 @@
+<section class="container">
+  <div class="add-post" (click)="addPost()">
+    <fa-icon [icon]="faPencil"></fa-icon>
+    <p>Add new post</p>
+  </div>
+</section>
+<div class="results">
+  <app-card *ngFor="let post of service.posts" [post]="post"></app-card>
+</div>

@@ -1,0 +1,28 @@
+section {
+  width: 80%;
+  margin: auto;
+}
+
+.add-post {
+  width: 90%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #343A40;
+  margin: auto auto 1rem;
+  text-align: center;
+}
+
+.results {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1366px) {
+  .results {
+    width: 100%;
+  }
+}

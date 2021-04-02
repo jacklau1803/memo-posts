@@ -1,0 +1,52 @@
+.hint {
+  width: 90%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #343A40;
+  margin: auto auto 1rem;
+  text-align: center;
+}
+
+.hint>h4 {
+  color: #343A40;
+}
+
+.loginBox {
+  height: 350px;
+  width: 300px;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  top: 50px;
+  padding: 10px;
+  border: 3px solid lightgray;
+  border-radius: 10px;
+}
+
+.loginBox>div {
+  display: block;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tabs>button {
+  border: 0;
+  width: 50%;
+  padding: auto;
+  background-color: white;
+  color: #343A40;
+}
+
+.tabs>button:disabled {
+  border-bottom: 4px solid #343A40;
+}
+
+.form-group {
+  height: 250px;
+}
+
+input {
+  margin: 10px 0;
+}

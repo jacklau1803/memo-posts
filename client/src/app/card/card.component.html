@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem; height: 450px; margin: 10px; box-shadow: 5px 5px lightgrey;">
+  <div class="card-body">
+    <h5 class="card-title" style="text-shadow: 1px 1px;">{{post.title}}</h5>
+    <p class="card-text">{{post.body}}</p>
+  </div>
+  <div class="card-body d-flex flex-row justify-content-around" style="position: absolute; top: 380px; width: 100%;">
+    <button class="btn btn-primary btn-shadow" (click)="update()">Update</button>
+    <button class="btn btn-danger btn-shadow" (click)="delete()">Delete</button>
+  </div>
+</div>

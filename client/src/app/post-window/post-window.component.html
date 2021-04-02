@@ -1,0 +1,20 @@
+<div class="modal-header navbar navbar-light bg-light">
+  <h4 class="modal-title navbar-brand">Post</h4>
+  <button type="button" class="close" aria-label="Close"
+   (click)="modal.dismiss()"><fa-icon [icon]="faTimes"></fa-icon>
+  </button>
+</div>
+<div class="modal-body">
+  <form class="form-group" [formGroup]="post">
+    <input class="form-control mb-3" formControlName="title" type="text" placeholder="Title">
+    <textarea class="form-control" formControlName="body" placeholder="Content"></textarea>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" (click)="savePost()">
+    Save
+  </button>
+  <button class="btn btn-secondary" (click)="modal.dismiss()">
+    Cancel
+  </button>
+</div>

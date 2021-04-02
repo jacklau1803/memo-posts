@@ -1,0 +1,36 @@
+.nav-btn {
+  display: inline-block;
+  height: 100%;
+  padding: auto;
+  margin: 0;
+  border: 0;
+  font-size: large;
+}
+
+.nav-text {
+  display: inline-block;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0;
+  border: 0;
+  font-size: large;
+  text-align: center;
+}
+
+.nav-title {
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 280px) {
+  .nav-title {
+    font-size: medium;
+  }
+  .nav-btn, .nav-text {
+    font-size: small;
+    padding: 5px;
+  }
+}

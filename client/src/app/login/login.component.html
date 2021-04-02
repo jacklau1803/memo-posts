@@ -1,0 +1,26 @@
+<div class="hint">
+  <h4>Please login or sign up if you do not have an account.</h4>
+</div>
+<div class="loginBox">
+  <div class="tabs">
+    <button [disabled]="!signupToggle" (click)="signupToggle = !signupToggle">Login</button>
+    <button [disabled]="signupToggle" (click)="signupToggle = !signupToggle">Signup</button>
+  </div>
+  <div *ngIf="!signupToggle" height="100%">
+    <form [formGroup]="loginForm" class="form-group d-flex flex-column justify-content-around">
+      <input type="text" class="form-control" placeholder="Username" formControlName="username">
+      <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      <button class="btn btn-primary" (click)="login()">Login</button>
+    </form>
+  </div>
+  <div *ngIf="signupToggle">
+    <form class="form-group" [formGroup]="signupForm"  class="form-group d-flex flex-column justify-content-around">
+      <input type="text" class="form-control" placeholder="Username" formControlName="username">
+      <small color="gray">5 to 15 lower letters and numbers only. It has to start with a letter.</small>
+      <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      <small color="gray">The length has to be 8 to 16.</small>
+      <input type="password" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword">
+      <button class="btn btn-primary" (click)="signup()">Sign up</button>
+    </form>
+  </div>
+</div>
