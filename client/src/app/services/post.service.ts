@@ -1,14 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Post } from './model/Post';
+import { environment } from 'src/environments/environment';
+import { Post } from '../model/post';
 import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostsService {
-  private url = 'http://localhost:8080/posts';
+export class PostService {
+  private url = environment.apiUrl + 'posts';
   public posts: Post[];
 
   constructor(private http: HttpClient, private storage: StorageService) { }
@@ -24,7 +25,7 @@ export class PostsService {
   }
 
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.url, {headers: this.getHeader()});
+    return this.http.get<Post[]>(this.url, {headers: this.getHeader()}).pipe();
   }
 
   updatePost(post: Post) {

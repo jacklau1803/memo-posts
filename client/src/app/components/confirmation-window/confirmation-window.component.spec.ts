@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostWindowComponent } from './post-window.component';
+import { ConfirmationWindowComponent } from './confirmation-window.component';
 
-describe('PostWindowComponent', () => {
-  let component: PostWindowComponent;
-  let fixture: ComponentFixture<PostWindowComponent>;
+describe('ConfirmationWindowComponent', () => {
+  let component: ConfirmationWindowComponent;
+  let fixture: ComponentFixture<ConfirmationWindowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostWindowComponent ]
+      declarations: [ ConfirmationWindowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostWindowComponent);
+    fixture = TestBed.createComponent(ConfirmationWindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

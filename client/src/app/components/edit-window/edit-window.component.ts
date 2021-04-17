@@ -1,21 +1,21 @@
-import { Post } from './../model/Post';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { PostsService } from '../posts.service';
+import { Post } from 'src/app/model/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
-  selector: 'app-post-window',
-  templateUrl: './post-window.component.html',
-  styleUrls: ['./post-window.component.css']
+  selector: 'app-edit-window',
+  templateUrl: './edit-window.component.html',
+  styleUrls: ['./edit-window.component.css']
 })
-export class PostWindowComponent implements OnInit {
+export class EditWindowComponent implements OnInit {
   post: FormGroup;
   faTimes = faTimes;
   @Input() defaultPost?;
 
-  constructor(private service: PostsService, public modal: NgbActiveModal) {}
+  constructor(private service: PostService, public modal: NgbActiveModal) {}
 
   ngOnInit(): void {
     this.post = new FormGroup({
@@ -44,9 +44,11 @@ export class PostWindowComponent implements OnInit {
       }
       this.defaultPost.title = this.post.get('title').value;
       this.defaultPost.body = this.post.get('body').value;
-      this.service.updatePost(this.defaultPost).subscribe((result: Post) => {
-        this.service.refreshPosts();
-        this.modal.close();
+      this.service.updatePost(this.defaultPost).subscribe({
+        next: (result: Post) => {
+          this.service.refreshPosts();
+          this.modal.close();
+        }
       });
     }
   }

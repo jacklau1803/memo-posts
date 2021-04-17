@@ -1,17 +1,16 @@
-import { LoginResponse } from './login-response';
-import { LoginService } from './login.service';
-import { StorageService } from './storage.service';
-
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { LoginResponse } from './model/login-response';
+import { LoginService } from './services/login.service';
+import { StorageService } from './services/storage.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'Memo Posts';
   loginSubscription: Subscription;
   constructor(public storage: StorageService, public login: LoginService, public router: Router) {}

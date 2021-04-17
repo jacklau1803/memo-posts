@@ -1,11 +1,12 @@
-import { LoginComponent } from './login/login.component';
-import { MainComponent } from './main/main.component';
+import { CardListComponent } from './components/card-list/card-list.component';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: '', component: CardListComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: ''}
 ];

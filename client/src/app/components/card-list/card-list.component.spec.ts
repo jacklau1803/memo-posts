@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeleteWindowComponent } from './delete-window.component';
+import { CardListComponent } from './card-list.component';
 
-describe('DeleteWindowComponent', () => {
-  let component: DeleteWindowComponent;
-  let fixture: ComponentFixture<DeleteWindowComponent>;
+describe('CardListComponent', () => {
+  let component: CardListComponent;
+  let fixture: ComponentFixture<CardListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeleteWindowComponent ]
+      declarations: [ CardListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeleteWindowComponent);
+    fixture = TestBed.createComponent(CardListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,16 +1,17 @@
-import { PostsService } from './posts.service';
-import { StorageService } from './storage.service';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { environment } from './../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { StorageService } from './storage.service';
+import { PostService } from './post.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private url = 'http://localhost:8080/';
+  private url = environment.apiUrl;
   loggedIn = false;
 
-  constructor(private http: HttpClient, private storage: StorageService, private postService: PostsService) { }
+  constructor(private http: HttpClient, private storage: StorageService, private postService: PostService) { }
 
   login(username, password) {
     return this.http.post(this.url + `login?username=${username}&password=${password}`, {});

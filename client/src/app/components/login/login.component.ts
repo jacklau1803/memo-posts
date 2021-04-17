@@ -1,16 +1,15 @@
-import { Router } from '@angular/router';
-import { passwordValidator } from './../password.validator';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../login.service';
-import { StorageService } from '../storage.service';
-import { LoginResponse } from '../login-response';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginResponse } from 'src/app/model/login-response';
+import { LoginService } from 'src/app/services/login.service';
+import { StorageService } from 'src/app/services/storage.service';
+import { passwordValidator } from 'src/app/validators/password.validator';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;

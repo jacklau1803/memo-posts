@@ -5,13 +5,16 @@
   </button>
 </div>
 <div class="modal-body">
-  <p>Do you really want to delete this post?</p>
+  <p>{{ msg }}</p>
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" (click)="deletePost()">
-    Confirm
+  <button *ngIf="btn" class="btn btn-primary" (click)="btn.function(this.modal.close)">
+    {{ btn.name }}
   </button>
-  <button class="btn btn-secondary" (click)="modal.dismiss()">
+  <button *ngIf="btn" class="btn btn-secondary" (click)="modal.dismiss()">
     Cancel
+  </button>
+  <button *ngIf="!btn" class="btn btn-secondary" (click)="modal.dismiss()">
+    OK
   </button>
 </div>

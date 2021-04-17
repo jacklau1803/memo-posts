@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "postList": {
+    "memo-posts": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/postList",
+            "outputPath": "dist/memo-posts",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,8 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "postList:build"
+            "browserTarget": "memo-posts:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "postList:build:production"
+              "browserTarget": "memo-posts:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "postList:build"
+            "browserTarget": "memo-posts:build"
           }
         },
         "test": {
@@ -111,15 +111,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "postList:serve"
+            "devServerTarget": "memo-posts:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "postList:serve:production"
+              "devServerTarget": "memo-posts:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "postList"
+    }
+  },
+  "defaultProject": "memo-posts"
 }

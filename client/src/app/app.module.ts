@@ -1,32 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardComponent } from './card/card.component';
-import { PostWindowComponent } from './post-window/post-window.component';
-import { DeleteWindowComponent } from './delete-window/delete-window.component';
+import { ConfirmationWindowComponent } from './components/confirmation-window/confirmation-window.component';
+import { EditWindowComponent } from './components/edit-window/edit-window.component';
+import { CardComponent } from './components/card/card.component';
+import { LoginComponent } from './components/login/login.component';
+import { CardListComponent } from './components/card-list/card-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { MainComponent } from './main/main.component';
-import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ConfirmationWindowComponent,
+    EditWindowComponent,
     CardComponent,
-    PostWindowComponent,
-    DeleteWindowComponent,
     LoginComponent,
-    MainComponent
+    CardListComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
