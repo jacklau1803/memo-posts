@@ -2,6 +2,11 @@
 
 This is a web app to keep your little memos similar to Google Keep. The backend service is built using Spring Boot and the frontend is built using Angular.
 
+## Online Demo
+
+https://memo-posts.herokuapp.com/
+An online demo is deployed on Heroku. Please allow some response time because Heroku puts the app that uses the free tier in hibernation when it is not used for a certain period of time.
+
 ## Enviorment
 
 Please make sure that you have a not-out-of-date NodeJS and Java installed in your enviorment.
